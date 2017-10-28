@@ -1,17 +1,12 @@
-
 *{
-
   margin:0,0;
 }
-
 #desk{
-
 width: 100%;
-height: 31em;
-position: relative;
-
-
+height: 33em;
+position: absolute;
 overflow:hidden;
+border-radius: 2%;
 }
 #bg{
   position: absolute;
@@ -26,84 +21,102 @@ overflow:hidden;
 #bird{
     width:4em;
     height:4em;
-   
     background-image:url("../images/7.png");
     background-repeat: no-repeat;
     border-radius:50%;
      position: absolute;
-     top:1em;
-     left:1em;
-
+     top:55%;
+     left:45%;
+}
+#startbg_out{
+  position: absolute;
+  left: 50%;
+}
+#startbg{
+    position: relative;
+     top:0em;
+    left:-50%;
+    width:30em;
+    height:30em;
+    background-image:url("../images/start.png");
+    background-repeat: no-repeat;
+}
+@media screen and (max-width: 800px) {
+  #startbg{
+  left:-45%;
+}
 }
 #but1{
 position: absolute;
-bottom:-1em; 
-left:0em;
+bottom:0em; 
+left:0%;
 width:100%;
-height:6em;
-
-
-
+height:7em;
 }
 #but2{
 position: absolute;
-bottom:-1em; 
+bottom:0em; 
 left:100%;
 width:100%;
-height:6em;
-
-
-
+height:7em;
 }
-
  .column{
   position: absolute;
   width: 6em;
-  height: 26em;
+  height: 100em;
   overflow: hidden;
-  left: 70%;
+  left: 100%;
   top:0;
 }
 .column .column1{
 position: absolute;
 width: 100%;
-height: 100em;
+height:100em;
 top:-32em;
-
 }
 @media screen and (max-width: 800px) {
   .column{
- 
   width: 4em;
-  
- 
- 
 }
 }
-
+#tip_out{
+  float: left;
+  position: absolute;
+  top: 0;
+  left:50%;
+}
 #tip{
-position: absolute;
-width: 15em;
-height: 10em;
+position: relative;
+width: 12em;
+height: 12em;
 top:5em;
-left: 16em;
-background-color:   #0BC3F3;
+left: -50%;
+background-color:   #3F3F3F;
 text-align: center;
-line-height: 10em;
+line-height: 8em;
 font-family: "楷体";
 font-size: 22px;
 color: white;
 opacity: 0;
-border-radius: 50%;
+border-radius: 10%;
+}
+#restart{
+  position: absolute;
+  width: 5em;
+  height: 1em;
+  line-height: 1em;
+ border: 1px solid white;
+ left: 3.5em;
+ z-index: 1;
 }
 @media screen and (max-width: 800px) {
   #tip{
-    left: 0;
+    left: -48%;
   }
 }
 #jishu{
 position: absolute;
-color: #8E8E8E;
+color: #FFFFFF;
 width:50;
 height: 3em;
 top:3px;
@@ -111,12 +124,18 @@ left: 50%;
 margin-left: -25px;
 font-size: 1.5em;
 }
-
 #click{
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-
+}
+#start{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
 }

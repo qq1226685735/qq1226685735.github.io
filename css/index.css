@@ -8,7 +8,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icmoon' !important;
@@ -18,12 +17,10 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-home3:before {
     content: "\e902";
 }
@@ -36,29 +33,19 @@
 .icon-menu:before {
     content: "\e9bd";
 }
-
-
-
-
-
 *{
 	margin: 0px;
 	padding:0px;
 }
 #body{
-	
-	
 	 background-image:url("../images/logobizi.jpg");
 }
-
 #xiala{
 	position: fixed;
 	width: 100%;
 	height: 2em;
 	 background-image:url("../images/logobizi.jpg");
-	 
      z-index:1;
-
 }
 #cai{
 	width: 15%;
@@ -67,15 +54,12 @@
 	text-align: center;
 	color: white;
 	font-size:2em;
-	
 }
 #sheng{
 	  width:70%;
 	  height: 100%;
-	 
 	   float:left;
 	   text-align: center;
-	  
 	  color: white;
 	  font-size: 1.2em;
 	  line-height: 2em;
@@ -88,8 +72,6 @@
 	text-align: center;
 	color: white;
 	font-size:2em;
-	
-
 }
 #logoqu{
 	height: 2em;
@@ -97,7 +79,6 @@
 	 background-image:url("../images/logobizi.jpg");
 }
 #logo{
-	
 	height: 2em;
 	width: 50%;
 	background-image: url("../images/logo.png");
@@ -106,26 +87,20 @@
 	background-position: 11em 0;
 }
 #xia{
-	
 	width: 100%;
 	height: 75em;
 	margin: 0 auto;
 }
 #daohang{
-     
 	width:100%;
 	height: 6em;
 	background-image: url("../images/xing1.gif");
-	
-	
 }
 #daohang ul{
 	width: 100%;
 	margin: 0 auto;
-	
 }
 #daohang li{
-
 	float: left;
 	font-size: 1.1em;
 	font-family: 'Oswald';	
@@ -133,14 +108,11 @@
 	height: 1.8em;
 	list-style: none;
 	text-align: center;
-	
-	
 }
 #daohang a{
 	color:black;
 	color: white;
 	text-decoration:none;
-
 }
 #juzhong{
 	width: 100%;
@@ -153,46 +125,29 @@
 	position: relative;
     z-index:0;
 	overflow: hidden;
-
 }
 @media screen and (max-width: 800px) {
        #ad{
-	
 	height: 15%;
-	
-
 }
     }
 .total{
-
  width: 100%;
  height: 100%;
  background-color: red;
  position: absolute;
-background-size:100%;
 }
 .one{ 
 	top:0px;
 	left: 0%;
-	background-image: url("../images/1a.jpg");
-
-
 }
 .two{
     top:0px;
     left:100%;
-    background-image: url("../images/2a.jpg");
 }
 .three{
 	top:0px;
     left:200%;
-    background-image: url("../images/3a.jpg");
-
-}
-.four{
-	top:0px;
-    left:300%;
-    background-image: url("../images/1a.jpg");
 }
 #lei{
 	width: 100%;
@@ -207,7 +162,6 @@ background-size:100%;
     line-height: 2em;
     color: white;
     font-family: 'Oswald';
-
 }
 .fen{
 	width: 100%;
@@ -217,7 +171,6 @@ background-size:100%;
 	font-size: 1.4em;
 }
 #two{
-
 	width: 0;
 	height:100%;
 	background-image: url("../images/two.gif");
@@ -227,13 +180,11 @@ background-size:100%;
 	 opacity:1;
 	z-index:2;
 	overflow: hidden;
-
 }
 #two li {
 	clear:both;
 	width: 80%;
 	height: 4em;
-	
 	color: white;
 	text-align: center;
 }
@@ -243,10 +194,8 @@ background-size:100%;
 	line-height: 3em;
 	text-align: center;
 	float:right;
-	
 	 overflow: hidden;
 	 color: white;
-
 }
 #fixedbottom{
 	 background-image:url("../images/logobizi.jpg");
@@ -256,37 +205,27 @@ background-size:100%;
 	position: fixed;
 	bottom:0px;
     left: 0px;
-    
-  
-   
-
 }
 .d{
 	width: 25%;
 	height: 2em;
 	float: left;
 	background-color: 
-
 }
 #d1{  
 	font-size: 2em;  
-	
 	text-align: center;
 	color: white;
 }
-
 #d2{
         font-size: 2em;  
-	
 	text-align: center;
 	color: white;
    }    
 #d3{  
 	  font-size: 2em;  
-	
 	text-align: center;
 	color: white;
-       
         }
 #d4{
       background-image: url();
@@ -301,9 +240,7 @@ background-size:100%;
 	width:20px;
 	height: 20px;
     top:0;
-    
     overflow: hidden;
-   
 }
 #qier1{
 	z-index:3;
@@ -311,9 +248,7 @@ background-size:100%;
 	width:20px;
 	height: 20px;
     top:0;
-   
     overflow: hidden;
-   
 }
 #qier2{
 	z-index:3;
@@ -321,9 +256,7 @@ background-size:100%;
 	width:20px;
 	height: 20px;
     top:0;
-   
     overflow: hidden;
-   
 }
 #qier3{
 	z-index:3;
@@ -331,20 +264,13 @@ background-size:100%;
 	width:20px;
 	height: 20px;
     top:0;
-   
     overflow: hidden;
-   
 }
 #li{
-
-
 	width: 100%;
 	height: 4em;
    text-align: center;
-
 }
 #li a{
-
 color: white;
-
 }
