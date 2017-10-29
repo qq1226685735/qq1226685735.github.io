@@ -10,10 +10,13 @@ var floor = document.getElementsByName("di"); //获取所有地板元素，共�
 var topScore = document.getElementById('jishu1'); //获取上方计分元素
 var restartElem=document.getElementById('restart');//获取重新开始div
 var startbg=document.getElementById('startbg');
+var best_score=document.getElementById('best_score')
 var score = 0; //记分
+setCookie("topscore","0"); 
 var innerWidth=window.innerWidth
 if(innerWidth< 800) {var left="2em";}
  else  {var left="10em";}
+ 
 /*判断相撞函数*/
 function collision() {
     function main() {
@@ -28,7 +31,17 @@ function collision() {
         } //判断与地板天花板相撞
         if (endFlag[0] || endFlag[1] || endFlag[2] || endFlag[3] || endFlag[4] || endFlag[5]) {
             endScore.innerHTML = score;
-            endTip.style.opacity = 1;
+
+             endTip.style.opacity = 1;
+          var topscore=getCookie("topscore"); 
+          var temp= parseInt(topscore);
+          if(score>temp){
+
+            delCookie("topscore") ;
+            setCookie("topscore",score); 
+          }
+          
+           best_score.innerHTML=getCookie("topscore");
             clearInterval(collisionIntv);
             clearInterval(imgIntv);
             clearInterval(floorIntv);
@@ -131,6 +144,7 @@ function colRun() {
                     b[i] = b[i] - 0.2;
                 } else {
                     score = score + 1;
+
                     topScore.innerHTML = score;
                     b[i] = b[i] + t; //当超出边界复位到指定位置
                     setRandomTop(colSon[i]); //设置随机高度 
@@ -144,6 +158,9 @@ function restartGame(){
      endTip.style.opacity = 0;
     bird.style.top="4em";
         bird.style.left=left;
+        score=0;
+       
+        topScore.innerHTML ="0";
    collision();
    birdFly();
    imgChange();
@@ -172,6 +189,35 @@ function start(){
          startbg.style.display="none";
     }
 }
+function setCookie(name,value) 
+{ 
+    var Days = 30; 
+    var exp = new Date(); 
+    exp.setTime(exp.getTime() + Days*24*60*60*1000); 
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString(); 
+} 
+
+//读取cookies 
+function getCookie(name) 
+{ 
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return unescape(arr[2]); 
+    else 
+        return null; 
+} 
+
+//删除cookies 
+function delCookie(name) 
+{ 
+    var exp = new Date(); 
+    exp.setTime(exp.getTime() - 1); 
+    var cval=getCookie(name); 
+    if(cval!=null) 
+        document.cookie= name + "="+cval+";expires="+exp.toGMTString(); 
+} 
 /*柱子流动*/
 /*window.addEventListener("load", collision);
 window.addEventListener("load", birdFly);*/
