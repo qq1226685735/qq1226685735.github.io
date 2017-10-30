@@ -1,4 +1,4 @@
-﻿var col = document.getElementsByName("colum"); //获取柱子div元素--用来控制流动 
+var col = document.getElementsByName("colum"); //获取柱子div元素--用来控制流动 
 var colSon = document.getElementsByName("column11"); //获取柱子div里内嵌div--用来设置柱子随机高度
 var bird = document.getElementById('bird'); //获取小鸟div
 var endTip = document.getElementById('tip'); //获取结束框div
@@ -11,9 +11,7 @@ var topScore = document.getElementById('jishu1'); //获取上方计分元素
 var restartElem=document.getElementById('restart');//获取重新开始div
 var startbg=document.getElementById('startbg');
 var best_score=document.getElementById('best_score')
-var scoreAudio = document.getElementById("scoreAudio");
-var clickAudio = document.getElementById("clickAudio");
-var overAudio = document.getElementById("overAudio");
+
 var score = 0; //记分
 setCookie("topscore","0"); 
 var innerWidth=window.innerWidth
@@ -33,7 +31,6 @@ function collision() {
             endFlag[5] = 1;
         } //判断与地板天花板相撞
         if (endFlag[0] || endFlag[1] || endFlag[2] || endFlag[3] || endFlag[4] || endFlag[5]) {
-            overAudio.play();
             endScore.innerHTML = score;
 
              endTip.style.opacity = 1;
@@ -58,6 +55,8 @@ function collision() {
 /*判断相撞*/
 /*小鸟运动*/
 function birdFly() {
+    var audio = document.getElementById("bgMusic");
+                    audio.play();
     bird.style.transform="rotate(0deg)";
     var v = 0, //速度
         a = 0.1, //加速度
@@ -74,11 +73,10 @@ function birdFly() {
     if (innerWidth < 800) temp = -4.5; //手机适应
     Screen.onclick = function() {
         v = temp;
-        value=-15;
-        clickAudio.play();
+        value=-10;
     };
     function fly() {
-        if(value<90)   angle=0.5; 
+        if(value<90)   angle=0.05; 
         else angle=0;
        
         v = v + a;
@@ -167,8 +165,8 @@ function colRun() {
                     b[i] = b[i] - 0.2;
                 } else {
                     score = score + 1;
-                    
-                    scoreAudio.play();
+                    var audio = document.getElementById("bgMusic");
+                    audio.play();
                     topScore.innerHTML = score;
                     b[i] = b[i] + t; //当超出边界复位到指定位置
                     setRandomTop(colSon[i]); //设置随机高度 
