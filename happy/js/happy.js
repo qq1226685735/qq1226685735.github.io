@@ -60,10 +60,10 @@ function birdFly() {
     var v = 0, //速度
         a = 0.1, //加速度
         y = 0, //位移
-        t = 1, //间隔时间默认为1
-        angle = 0, //角度变化速度
+        t = 1; //间隔时间默认为1
+/*        angle = 0, //角度变化速度
         rotate, //transform值
-        value = 0; //初始角度
+        value = 0; //初始角度*/
     var temp = -5; //点击向上的初速度
     if (innerWidth < 800) temp = -4.5; //手机适应
     Screen.onclick = function() {
@@ -73,16 +73,17 @@ function birdFly() {
     };
 
     function fly() {
-        if (value < 90) angle = 0.5;
-        else angle = 0; //当角度大于90度时停止旋转
+       
 
         v = v + a;
         y = v * t;
         bird.style.top = bird.offsetTop + y + "px";
+        /* if (value < 90) angle = 0.5;
+        else angle = 0; //当角度大于90度时停止旋转
         var trans = bird.style.transform;
         value = value + angle;
         rotate = "rotate(" + value + "deg)";
-        bird.style.transform = rotate;
+        bird.style.transform = rotate;*/
 
 
     }
